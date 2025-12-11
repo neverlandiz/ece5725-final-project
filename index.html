@@ -65,20 +65,20 @@
 
       <div class="starter-template">
         <h1>Goose Goose Duck</h1>
-        <p class="lead">ECE 5725 Final Project<br>Katherine Hsu (kh854) and Bole Ding (bd467)</p>
+        <p class="lead">ECE 5725 Final Project: Wednesday Group 8<br>Katherine Hsu (kh854) and Bole Ding (bd467)<br>Date of Submission: 12/12/2025</p>
       </div>
 
-      <hr>
-      <div class="center-block">
+      <!-- <hr> -->
+      <!-- <div class="center-block">
           <iframe width="640" height="360" src="https://www.youtube.com/embed?v=et91Gea6CPk" frameborder="0" allowfullscreen></iframe>
           <h4 style="text-align:center;">Demonstration Video</h4>
-      </div>
+      </div> -->
 
       <hr id="intro">
 
       <div style="text-align:center;">
               <h2>Introduction</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+              <p style="text-align: left;padding: 0px 30px;">Once upon a time, a baby duckling is following its mother around the ECE 5725 town…but the duckling has a bad sense of direction. For this project, we plan to build two robots, consisting of one leader and one follower, to mimic the behavior of a mother duck and a baby duck. </p>
       </div>
 
     <hr id='obj'>
@@ -89,11 +89,8 @@
           </div>
           <div class="col-md-8" style="font-size:18px;">
           <h2>Project Objective:</h2>
-          <ul>
-              <li>some important objectives.some important objectives.some important objectives.some important objectives.</li>
-                <li>some other important objectives.</li>
-            <li>some not-that-important objectives.</li>
-          </ul>
+          <p style="text-align: left;padding: 0px 30px;">Provide a concise summary (3–4 sentences) of your project’s Summarize what you accomplished
+            at a high level.</p>
           </div>
       </div>
 
@@ -101,49 +98,73 @@
 
       <div style="text-align:center;">
               <h2>Video</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+              <p style="text-align: left;padding: 0px 30px;">Include the following placeholder video link on your website:
+                https://www.youtube.com/watch?v=et91Gea6CPk
+                Create a ~2-minute video demonstrating your project and upload it to the Cornell Box folder
+                (https://cornell.box.com/s/0v0wdiky2z7gvs7un9reylqd05eb8mu3). The instructional team will
+                then upload your video to the class YouTube channel and update your website to embed the final
+                version.</p>
       </div>
 
     <hr id='design'>
 
       <div style="text-align:center;">
               <h2>Design</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+              <p style="text-align: left;padding: 0px 30px;">The follower robot would follow the leader robot around and signal the leader via WiFi if it’s lost. The robot is considered lost if the distance measured is too large or if it’s been staring at a wall for 5 seconds. Once the leader robot receives the LOST signal, it would start seeking for the follower robot and send a FOUND signal upon discovery. Once the two robots are reunited, they would dance.</p>
+              <p style="text-align: left;padding: 0px 30px;">The leader robot is equipped with a camera and uses the OpenCV library for color detection to seek for the follower robot. For debugging purposes, it also uses the PiTFT screen to display data and four buttons to perform different actions (seek, move, temp quit, full quit). The follower robot is equipped with 2 ultrasonic sensors to measure its distance from the leader robot and follow it around and 1 buzzer for audio cue.</p>
+              <p style="text-align: left;padding: 0px 30px;">key design iterations and major milestones</p>
       </div>
 
     <hr id='drawings'>
 
       <div style="text-align:center;">
               <h2>Drawings</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+              <div style="text-align:center;">
+                <h3>Leader Robot Logic</h3>
+                <img class="img-rounded" src="img/leader_logic.png" alt="Leader Robot Logic Image" style="width:80%;">
+              </div>
+              <div style="text-align:center;">
+                <h3>Follower Robot Logic</h3>
+                <img class="img-rounded" src="img/follower_logic.png" alt="Follower Robot Logic Image" style="width:80%;">
+              </div>
+              <p style="text-align: left;padding: 0px 30px;">write some descriptions for the images? maybe more drawings? or circuit diagrams?</p>
       </div>
 
     <hr id='testing'>
 
       <div style="text-align:center;">
               <h2>Testing</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+              <p style="text-align: left;padding: 0px 30px;">challenges encountered and how you resolved them? testing procedures and results verifying functionality</p>
       </div>
 
     <hr id='result'>
 
       <div style="text-align:center;">
               <h2>Result</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+              <p style="text-align: left;padding: 0px 30px;">evaluate your outcomes, did your project perform as intended? did you meet your original goals and specifications?</p>
       </div>
     
     <hr id='conclusions'>
 
       <div style="text-align:center;">
               <h2>Conclusions</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+              <p style="text-align: left;padding: 0px 30px;">key takeaways, what worked well, what did not work as expected</p>
+              <p style="text-align: left;padding: 0px 30px;">Communication: Bidirectional WiFi communication between the leader and follower robot work nicely without noticeable delay.</p>
+              <p style="text-align: left;padding: 0px 30px;">Leader Robot: Color recognition works well, and it can plan a path to reach the red covered baby. However, due to motor inconsistencies and a lack of object avoidance system, it still struggles to wander around properly.</p>
+              <p style="text-align: left;padding: 0px 30px;">Follower Robot: Movement works normally, and ultrasonic distance sensing is accurate, but the following behavior is weak as it often loses the target and turns too slowly.</p>
       </div>
     
     <hr id='future'>
 
-      <div style="text-align:center;">
-              <h2>Future Work</h2>
-              <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.</p>
+      <div style="font-size:18px">
+        <h2 style="text-align:center">Future Work</h2>
+        <ul>
+          <li>Auto align/calibrate upon reunited so they can resume the following sequence</li>
+          <li>Object avoidance on the leader robot</li>
+          <li>More types of commands for the leader robot to send to the follower robot</li>
+          <li>Voice commands instead of physical buttons for the leader robot</li>
+          <li>Add additional sensors for better following and seeking performances</li>
+        </ul>
       </div>
 
     <hr>
@@ -187,7 +208,7 @@
               <li>Small Breadboard ($4)</li>
               <li>LEDs, Resistors, Wires, Foam Boards, Power Cables, AA Battery Holders, Batteries, MicroHDMI Adapter - Provided in lab</li>
           </ul>
-          <h3>Total: $69.95</h3>
+          <h3>Total: $62</h3>
       </div>
       <hr>
       <div style="font-size:18px">
@@ -207,6 +228,7 @@ int main(){
               </code></pre> -->
         <h3>Leader Robot Code</h3>
         <script src="https://gist.github.com/neverlandiz/517b0841485424960c65d1ff2d5ed6dd.js"></script>
+        <h3>Follower Robot Code</h3>
       </div>
       
     </div><!-- /.container -->
