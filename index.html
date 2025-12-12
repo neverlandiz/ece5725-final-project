@@ -21,6 +21,10 @@
       details.code-fold summary{cursor:pointer;padding:14px 16px;font-size:18px;font-weight:800;list-style:none}
       details.code-fold summary::-webkit-details-marker{display:none}
       .code-fold-body{padding:0 16px 16px}
+
+      .img-triple{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;padding:0 30px}
+      .img-triple .img-col{flex:1 1 280px}
+      .img-triple img{width:100%;height:280px;object-fit:contain;display:block}
     </style>
   </head>
 
@@ -127,7 +131,7 @@
 
         <p class="section-pad" style="text-align:left;">Wiring for the car peripherals is almost the same for both ducks. Two motors connect to the motor driver’s A and B outputs, and both PWM pins connect to the microcontroller. For the mother duck, a camera plugs into the Pi to find the baby. For the baby duck, two ultrasonic sensors connect to GPIO pins (trig/echo) for distance measurement, plus a buzzer for crying.</p>
 
-        <div class="img-pair">
+        <div class="img-triple">
           <div class="img-col">
             <div class="section-subtitle">Leader Robot Wiring</div>
             <img class="img-rounded" src="img/leader_robot.png" alt="Leader Robot Wiring Image">
@@ -136,13 +140,10 @@
             <div class="section-subtitle">Follower Robot Wiring</div>
             <img class="img-rounded" src="img/follower_robot_wires.jpeg" alt="Follower Robot Wiring Image">
           </div>
-        </div>
-
-        <div style="height:18px;"></div>
-
-        <div class="img-single-wrap">
-          <div class="section-subtitle">Two Robots Wiring</div>
-          <img class="img-rounded img-single img-two-wire" src="img/two_robots_with_wires.png" alt="Two Robots Wiring Image">
+          <div class="img-col">
+            <div class="section-subtitle">Two Robots Wiring</div>
+            <img class="img-rounded" src="img/two_robots_with_wires.png" alt="Two Robots Wiring Image">
+          </div>
         </div>
 
         <p class="section-pad" style="text-align:left;">write some descriptions for the images? maybe more drawings? or circuit diagrams?</p>
@@ -152,16 +153,19 @@
         <h2 class="section-title">Testing</h2>
         <p class="section-pad" style="text-align:left;">challenges encountered and how you resolved them? testing procedures and results verifying functionality</p>
         <p class="section-pad" style="text-align:left;">Humans life sucks, so does the duck...</p>
-        <div class="img-pair">
-          <div class="img-col">
-            <img class="img-rounded" src="pics/testing1.jpg" alt="Leader Robot Logic Image">
-          </div>
-          <div class="img-col">
-            <img class="img-rounded" src="pics/testing2.png" alt="Follower Robot Logic Image">
-        </div>
-        </div>
+
         <p class="section-pad" style="text-align:left;">Since ducks need big ponds instead of cages, our robot ducks also demanded space, so we ran most experiments in the corridor outside the lab. In this “indoor wetland,” we discovered that other objects often had colors similar to the baby robot, which sometimes confused the mother's color-recognition camera and made her chase the wrong “duck.”</p>
         <p class="section-pad" style="text-align:left;">On the software side, the follower Pi Zero behaved like a stubborn duck that refused to wake up. When we used crontab for auto-start, the robot often stayed frozen after reboot, even though the same program worked perfectly when launched manually with a monitor attached. After switching to the second auto-start method from Lab 3 (using .bashrc), startup became much more reliable, and the baby robot finally began to follow its mom automatically after power-on.</p>
+
+        <div class="img-pair">
+          <div class="img-col">
+            <img class="img-rounded" src="pics/testing1.jpg" alt="Testing Image 1">
+          </div>
+          <div class="img-col">
+            <img class="img-rounded" src="pics/testing2.png" alt="Testing Image 2">
+          </div>
+        </div>
+
         <p class="section-pad" style="text-align:left;">Networking added another layer of chaos. The IP addresses of both the mother and baby kept changing. It looked like they were migrating to a new lake every time we rebooted. We had to constantly look up the current IPs and update the program configuration before the two ducks could talk again.</p>
         <p class="section-pad" style="text-align:left;">Hardware was not innocent either. Loose power connections meant that the car sometimes stopped or refused to start at all, simply because the wiring between the battery pack / power bank and the Raspberry Pi or motor driver was unstable. We developed the habit of checking and securing all power cables before each test. At the same time, the ultrasonic sensors occasionally returned None, making the baby duck's distance judgment unreliable, so we increased the delay between reading the left and right sensors to get more stable measurements.</p>
         
