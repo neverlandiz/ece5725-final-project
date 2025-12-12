@@ -1,17 +1,71 @@
 body {
-    padding-top: 50px;
+  padding-top: 50px;
+  background-image: url("img/two_duck.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Comic Sans MS", "Comic Neue", "Segoe Print", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #111;
+}
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.content-glass {
+  margin-top: 18px;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .starter-template {
-  padding: 40px 15px;
+  padding: 28px 15px;
   text-align: center;
 }
 
-hr { margin: 20px 0 20px 0; }
+.starter-template h1 {
+  font-size: 46px;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Verdana", "Arial", sans-serif;
+}
+
+h2, h3, h4 {
+  font-family: "Trebuchet MS", "Verdana", "Arial", sans-serif;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+hr {
+  margin: 22px 0 22px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
 
 .center-block {  
-    width:640px;
+  width: 640px;
   display: block;  
   margin-right: auto;  
   margin-left: auto;  
-}  
+}
