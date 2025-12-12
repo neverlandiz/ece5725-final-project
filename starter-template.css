@@ -75,8 +75,9 @@ hr {
   margin-left: auto;  
 }
 
-.navbar.navbar-brand { font-size: 16px; }
-.navbar.navbar-nav > li > a { font-size: 14px; }
+.navbar .navbar-brand { font-size: 16px; }
+.navbar .navbar-nav > li > a { font-size: 14px; }
+
 .navbar.navbar-default {
   background-color: rgba(248, 248, 248, 0.75) !important; 
   border-color: rgba(231, 231, 231, 0.35) !important;
@@ -90,4 +91,8 @@ hr {
 .navbar {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+
+.content-glass {
+  background: rgba(255, 255, 255, 0.55);
 }

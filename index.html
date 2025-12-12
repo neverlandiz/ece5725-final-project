@@ -4,34 +4,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Goose Goose Duck</title>
-
-    <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
-
-    <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+      .navbar .container{background:transparent !important;border-radius:0 !important;padding-top:0 !important;padding-bottom:0 !important}
+      .section-title{font-size:42px;text-align:left !important;margin:12px 30px 18px;font-weight:800}
+      .section-subtitle{font-size:22px;font-weight:800;margin:10px 0 10px;text-align:center}
+      .section-pad{padding:0 30px}
+      .img-pair{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;padding:0 30px}
+      .img-pair .img-col{flex:1 1 360px}
+      .img-pair img{width:100%;height:320px;object-fit:contain;display:block}
+      .img-single-wrap{text-align:center;padding:0 30px}
+      .img-single{width:90%;max-width:980px;height:auto;display:block;margin:0 auto}
+      details.code-fold{margin:0 30px 12px;border-radius:12px;background:rgba(255,255,255,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 6px 18px rgba(0,0,0,.18);overflow:hidden}
+      details.code-fold summary{cursor:pointer;padding:14px 16px;font-size:18px;font-weight:800;list-style:none}
+      details.code-fold summary::-webkit-details-marker{display:none}
+      .code-fold-body{padding:0 16px 16px}
+    </style>
   </head>
 
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -56,218 +49,206 @@
             <li><a href="#conclusions">Conclusions</a></li>
             <li><a href="#future">Future Work</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </nav>
 
     <div class="container">
       <div class="content-glass">
+        <div class="starter-template">
+          <h1>Goose Goose Duck</h1>
+          <p class="lead">ECE 5725 Final Project: Wednesday Group 8<br>Katherine Hsu (kh854) and Bole Ding (bd467)<br>Date of Submission: 12/12/2025</p>
+        </div>
 
-      <div class="starter-template">
-        <h1>Goose Goose Duck</h1>
-        <p class="lead">ECE 5725 Final Project: Wednesday Group 8<br>Katherine Hsu (kh854) and Bole Ding (bd467)<br>Date of Submission: 12/12/2025</p>
-      </div>
+        <hr id="intro">
 
-      <!-- <hr> -->
-      <!-- <div class="center-block">
-          <iframe width="640" height="360" src="https://www.youtube.com/embed?v=et91Gea6CPk" frameborder="0" allowfullscreen></iframe>
-          <h4 style="text-align:center;">Demonstration Video</h4>
-      </div> -->
+        <h2 class="section-title">Introduction</h2>
+        <p class="section-pad" style="text-align:left;">Once upon a time, a baby duckling is following its mother around the ECE 5725 town…but the duckling has a bad sense of direction. For this project, we plan to build two robots, consisting of one leader and one follower, to mimic the behavior of a mother duck and a baby duck.</p>
 
-      <hr id="intro">
+        <hr id="obj">
 
-      <div style="text-align:center;">
-              <h2>Introduction</h2>
-              <p style="text-align: left;padding: 0px 30px;">Once upon a time, a baby duckling is following its mother around the ECE 5725 town…but the duckling has a bad sense of direction. For this project, we plan to build two robots, consisting of one leader and one follower, to mimic the behavior of a mother duck and a baby duck. </p>
-      </div>
-
-    <hr id='obj'>
-
-      <div class="row">
+        <div class="row">
           <div class="col-md-4" style="text-align:center;">
-          <img class="img-rounded" src="pics/1.jpg" alt="Generic placeholder image" width="240" height="240">
+            <img class="img-rounded" src="pics/1.jpg" alt="Generic placeholder image" width="240" height="240">
           </div>
           <div class="col-md-8" style="font-size:18px;">
-          <h2>Project Objective:</h2>
-          <p style="text-align: left;padding: 0px 30px;">
-            Our project features two robots, a leader and a follower, acting as a robotic mother duck🦆 and baby duck🐤. While the mother was moving, the baby carefully followed the mom but sometimes got “lost” and cried dramatically. The mother would then try to find the baby by color recognition with an equipped camera, like a tiny rescue mission. After the reunion, they ended up spinning and dancing happily together.
-
-            Provide a concise summary (3-4 sentences) of your project's Summarize what you accomplished
-            at a high level.</p>
+            <h2 class="section-title" style="margin-left:0;margin-right:0;">Project Objective:</h2>
+            <p style="text-align:left;padding:0 30px 0 0;">
+              Our project features two robots, a leader and a follower, acting as a robotic mother duck🦆 and baby duck🐤. While the mother was moving, the baby carefully followed the mom but sometimes got “lost” and cried dramatically. The mother would then try to find the baby by color recognition with an equipped camera, like a tiny rescue mission. After the reunion, they ended up spinning and dancing happily together.
+              Provide a concise summary (3-4 sentences) of your project's Summarize what you accomplished
+              at a high level.
+            </p>
           </div>
-      </div>
+        </div>
 
-    <hr id='video'>
+        <hr id="video">
 
-      <div style="text-align:center;">
-              <h2>Video</h2>
-              <p style="text-align: left;padding: 0px 30px;">Include the following placeholder video link on your website:
-                https://www.youtube.com/watch?v=et91Gea6CPk
-                Create a ~2-minute video demonstrating your project and upload it to the Cornell Box folder
-                (https://cornell.box.com/s/0v0wdiky2z7gvs7un9reylqd05eb8mu3). The instructional team will
-                then upload your video to the class YouTube channel and update your website to embed the final
-                version.</p>
-              <h3>Placeholder Video</h3>
-              <iframe width="640" height="360" src="https://www.youtube.com/watch?v=et91Gea6CPk" frameborder="0" allowfullscreen></iframe>
-      </div>
+        <h2 class="section-title">Video</h2>
+        <p class="section-pad" style="text-align:left;">Include the following placeholder video link on your website:
+          https://www.youtube.com/watch?v=et91Gea6CPk
+          Create a ~2-minute video demonstrating your project and upload it to the Cornell Box folder
+          (https://cornell.box.com/s/0v0wdiky2z7gvs7un9reylqd05eb8mu3). The instructional team will
+          then upload your video to the class YouTube channel and update your website to embed the final
+          version.
+        </p>
+        <div style="text-align:center;">
+          <h3>Placeholder Video</h3>
+          <iframe width="640" height="360" src="https://www.youtube.com/embed/et91Gea6CPk" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <hr id='design'>
+        <hr id="design">
 
-      <div style="text-align:center;">
-              <h2>Design</h2>
-              <p style="text-align: left;padding: 0px 30px;">The follower robot would follow the leader robot around and signal the leader via WiFi if it’s lost. The robot is considered lost if the distance measured is too large or if it’s been staring at a wall for 5 seconds. Once the leader robot receives the LOST signal, it would start seeking for the follower robot and send a FOUND signal upon discovery. Once the two robots are reunited, they would dance.</p>
-              <p style="text-align: left;padding: 0px 30px;">The leader robot is equipped with a camera and uses the OpenCV library for color detection to seek for the follower robot. For debugging purposes, it also uses the PiTFT screen to display data and four buttons to perform different actions (seek, move, temp quit, full quit). The follower robot is equipped with 2 ultrasonic sensors to measure its distance from the leader robot and follow it around and 1 buzzer for audio cue.</p>
-              <p style="text-align: left;padding: 0px 30px;">key design iterations and major milestones</p>
-      </div>
+        <h2 class="section-title">Design</h2>
+        <p class="section-pad" style="text-align:left;">The follower robot would follow the leader robot around and signal the leader via WiFi if it’s lost. The robot is considered lost if the distance measured is too large or if it’s been staring at a wall for 5 seconds. Once the leader robot receives the LOST signal, it would start seeking for the follower robot and send a FOUND signal upon discovery. Once the two robots are reunited, they would dance.</p>
+        <p class="section-pad" style="text-align:left;">The leader robot is equipped with a camera and uses the OpenCV library for color detection to seek for the follower robot. For debugging purposes, it also uses the PiTFT screen to display data and four buttons to perform different actions (seek, move, temp quit, full quit). The follower robot is equipped with 2 ultrasonic sensors to measure its distance from the leader robot and follow it around and 1 buzzer for audio cue.</p>
+        <p class="section-pad" style="text-align:left;">key design iterations and major milestones</p>
 
-    <hr id='drawings'>
+        <hr id="drawings">
 
-      <div style="text-align:center;">
-              <h2>Drawings</h2>
-              <div style="text-align:center;">
-                <h3>Leader Robot Logic</h3>
-                <img class="img-rounded" src="img/leader_logic.png" alt="Leader Robot Logic Image" style="width:80%;">
-              </div>
-              <div style="text-align:center;">
-                <h3>Follower Robot Logic</h3>
-                <img class="img-rounded" src="img/follower_logic.png" alt="Follower Robot Logic Image" style="width:80%;">
-              </div>
-              <div style="text-align:center;">
-                <h3>Leader Robot Wiring</h3>
-                <img class="img-rounded" src="img/leader_robot.png" alt="Leader Robot Wiring Image" style="width:80%;">
-              </div>
-              <div style="text-align:center;">
-                <h3>Follower Robot Wiring</h3>
-                <img class="img-rounded" src="img/follower_robot_wires.jpeg" alt="Follower Robot Wiring Image" style="width:80%;">
-              </div>
-              <div style="text-align:center;">
-                <h3>Two Robots Wiring</h3>
-                <img class="img-rounded" src="img/two_robots_with_wires.png" alt="Two Robots Wiring Image" style="width:80%;">
-              </div>
-              <p style="text-align: left;padding: 0px 30px;">write some descriptions for the images? maybe more drawings? or circuit diagrams?</p>
-      </div>
+        <h2 class="section-title">Drawings</h2>
 
-    <hr id='testing'>
-    
-      <div style="text-align:center;">
-              <h2>Testing</h2>
-              <p style="text-align: left;padding: 0px 30px;">challenges encountered and how you resolved them? testing procedures and results verifying functionality</p>
-              <p style="text-align: left;padding: 0px 30px;">Humans life sucks, so does the duck.</p>
-              <p style="text-align: left;padding: 0px 30px;">Since ducks need big ponds instead of cages, our robot ducks also demanded space, so we ran most experiments in the corridor outside the lab. In this “indoor wetland,” we discovered that other objects often had colors similar to the baby robot, which sometimes confused the mother's color-recognition camera and made her chase the wrong “duck.”</p>
-              <p style="text-align: left;padding: 0px 30px;">On the software side, the follower Pi Zero behaved like a stubborn duck that refused to wake up. When we used crontab for auto-start, the robot often stayed frozen after reboot, even though the same program worked perfectly when launched manually with a monitor attached. After switching to the second auto-start method from Lab 3 (using .bashrc), startup became much more reliable, and the baby robot finally began to follow its mom automatically after power-on.</p>
-              <p style="text-align: left;padding: 0px 30px;">Networking added another layer of chaos. The IP addresses of both the mother and baby kept changing. It looked like they were migrating to a new lake every time we rebooted. We had to constantly look up the current IPs and update the program configuration before the two ducks could talk again. </p>
-              <p style="text-align: left;padding: 0px 30px;">Hardware was not innocent either. Loose power connections meant that the car sometimes stopped or refused to start at all, simply because the wiring between the battery pack / power bank and the Raspberry Pi or motor driver was unstable. We developed the habit of checking and securing all power cables before each test. At the same time, the ultrasonic sensors occasionally returned None, making the baby duck's distance judgment unreliable, so we increased the delay between reading the left and right sensors to get more stable measurements.</p>
-              <p style="text-align: left;padding: 0px 30px;">Despite all the drama, most system functions eventually worked as intended. The baby normally follows the mom but can accidentally get lost; if it stares at a wall for more than 5 seconds, it sends a LOST signal to the mother. Initially, the baby was also spamming motor data for display on the PiTFT, which delayed LOST detection, but after removing those prints, the mom could recognize the LOST signal within about 1 second on average.</p>
-              <p style="text-align: left;padding: 0px 30px;">When everything works, the mother calls the baby to dance, the baby receives the command and joins in, and the grown-up baby follows more smoothly while the once-careless mom turns more carefully. The duck family finally passes the test bench and survives another day in this “happy” human-built pond!</p>
-      </div>
-
-    <hr id='result'>
-
-      <div style="text-align:center;">
-              <h2>Result</h2>
-              <p style="text-align: left;padding: 0px 30px;">evaluate your outcomes, did your project perform as intended? did you meet your original goals and specifications?</p>
-              <p style="text-align: left;padding: 0px 30px;">In terms of communication, the duck family actually behaves better than most group chats. The bidirectional WiFi link between the leader and follower runs smoothly, with commands and LOST signals exchanged without any noticeable delay. From a system perspective, the network layer is stable and responsive enough that the “conversation” between mother and baby is not the main bottleneck of their behavior.</p>
-              <p style="text-align: left;padding: 0px 30px;">On the motion and perception side, things are a bit more... bird-brained. The mother's color recognition works reliably, and she can plan a path toward the red-covered baby, but motor inconsistencies and the lack of an object-avoidance system mean her wandering is still clumsy and easily disrupted. The baby moves and measures distance correctly, with ultrasonic sensing behaving as expected, yet its following logic is underpowered: it tends to lose sight of the target and reacts too slowly when turning. In short, the ducks can see and talk just fine, which is a good start. They just haven't fully learned how to walk elegantly together.</p>
-      </div>
-    
-    <hr id='conclusions'>
-
-      <div style="text-align:center;">
-              <h2>Conclusions</h2>
-              <p style="text-align: left;padding: 0px 30px;">key takeaways, what worked well, what did not work as expected</p>
-              <p style="text-align: left;padding: 0px 30px;">Communication: Bidirectional WiFi communication between the leader and follower robot work nicely without noticeable delay.</p>
-              <p style="text-align: left;padding: 0px 30px;">Leader Robot: Color recognition works well, and it can plan a path to reach the red covered baby. However, due to motor inconsistencies and a lack of object avoidance system, it still struggles to wander around properly.</p>
-              <p style="text-align: left;padding: 0px 30px;">Follower Robot: Movement works normally, and ultrasonic distance sensing is accurate, but the following behavior is weak as it often loses the target and turns too slowly.</p>
-      </div>
-    
-    <hr id='future'>
-
-      <div style="font-size:18px">
-        <h2 style="text-align:center">Future Work</h2>
-        <ul>
-          <li>Auto align/calibrate upon reunited so they can resume the following sequence</li>
-          <li>Object avoidance on the leader robot</li>
-          <li>More types of commands for the leader robot to send to the follower robot</li>
-          <li>Voice commands instead of physical buttons for the leader robot</li>
-          <li>Add additional sensors for better following and seeking performances</li>
-        </ul>
-      </div>
-
-    <hr>
-
-    <div class="row" style="text-align:center;">
-          <h2>Work Distribution</h2>
-          <div style="text-align:center;">
-              <img class="img-rounded" src="pics/group.jpg" alt="Generic placeholder image" style="width:80%;">
-              <h4>Project group picture</h4>
+        <div class="img-pair">
+          <div class="img-col">
+            <div class="section-subtitle">Leader Robot Logic</div>
+            <img class="img-rounded" src="img/leader_logic.png" alt="Leader Robot Logic Image">
           </div>
-          <div class="col-md-6" style="font-size:16px">
-              <img class="img-rounded" src="pics/a.png" alt="Generic placeholder image" width="240" height="240">
-              <h3>Rick</h3>
-              <p class="lead">netid@cornell.edu</p>
-              <p>Designed the overall software architecture (Just being himself).
+          <div class="img-col">
+            <div class="section-subtitle">Follower Robot Logic</div>
+            <img class="img-rounded" src="img/follower_logic.png" alt="Follower Robot Logic Image">
           </div>
-          <div class="col-md-6" style="font-size:16px">
-              <img class="img-rounded" src="pics/b.png" alt="Generic placeholder image" width="240" height="240">
-              <h3>Morty</h3>
-              <p class="lead">netid@cornell.edu</p>
-              <p>Tested the overall system.
-          </div>
-      </div>
+        </div>
 
-    <hr>
-      <div style="font-size:18px">
-          <h2>Parts List</h2>
-          <ul>
-              <li>Standard Class Kit: Raspberry Pi 4, PiTFT, Expansion Cable, Robot Kit, Pi Case, 2 SD Cards, Pi Charger, Cables, Breadboard</li>
-              <li>Raspberry Pi Zero 2W ($10)</li>
-              <li>Raspberry Pi Zero 2W Case ($3, didn't use?)</li>
-              <li>Raspberry Pi Camera Module 2 ($15)</li>
-              <li>Raspberry Pi Camera Cable ($1)</li>
-              <li>Raspberry Pi Camera Case ($1)</li>
-              <li>IMU Sensor ($2, didn't use?)</li>
-              <li>2 * Ultrasonic Sensors ($2 each)</li>
-              <li>2 * Buzzers ($0.5 each, only used one?)</li>
-              <li>USB Microphone ($2, didn't use?)</li>
-              <li>2 * Robot Kit ($6 each)</li>
-              <li>Motor Driver ($7)</li>
-              <li>Small Breadboard ($4)</li>
-              <li>LEDs, Resistors, Wires, Foam Boards, Power Cables, AA Battery Holders, Batteries, MicroHDMI Adapter - Provided in lab</li>
+        <div style="height:18px;"></div>
+
+        <div class="img-pair">
+          <div class="img-col">
+            <div class="section-subtitle">Leader Robot Wiring</div>
+            <img class="img-rounded" src="img/leader_robot.png" alt="Leader Robot Wiring Image">
+          </div>
+          <div class="img-col">
+            <div class="section-subtitle">Follower Robot Wiring</div>
+            <img class="img-rounded" src="img/follower_robot_wires.jpeg" alt="Follower Robot Wiring Image">
+          </div>
+        </div>
+
+        <div style="height:18px;"></div>
+
+        <div class="img-single-wrap">
+          <div class="section-subtitle">Two Robots Wiring</div>
+          <img class="img-rounded img-single" src="img/two_robots_with_wires.png" alt="Two Robots Wiring Image">
+        </div>
+
+        <p class="section-pad" style="text-align:left;">write some descriptions for the images? maybe more drawings? or circuit diagrams?</p>
+
+        <hr id="testing">
+
+        <h2 class="section-title">Testing</h2>
+        <p class="section-pad" style="text-align:left;">challenges encountered and how you resolved them? testing procedures and results verifying functionality</p>
+        <p class="section-pad" style="text-align:left;">Humans life sucks, so does the duck.</p>
+        <p class="section-pad" style="text-align:left;">Since ducks need big ponds instead of cages, our robot ducks also demanded space, so we ran most experiments in the corridor outside the lab. In this “indoor wetland,” we discovered that other objects often had colors similar to the baby robot, which sometimes confused the mother's color-recognition camera and made her chase the wrong “duck.”</p>
+        <p class="section-pad" style="text-align:left;">On the software side, the follower Pi Zero behaved like a stubborn duck that refused to wake up. When we used crontab for auto-start, the robot often stayed frozen after reboot, even though the same program worked perfectly when launched manually with a monitor attached. After switching to the second auto-start method from Lab 3 (using .bashrc), startup became much more reliable, and the baby robot finally began to follow its mom automatically after power-on.</p>
+        <p class="section-pad" style="text-align:left;">Networking added another layer of chaos. The IP addresses of both the mother and baby kept changing. It looked like they were migrating to a new lake every time we rebooted. We had to constantly look up the current IPs and update the program configuration before the two ducks could talk again.</p>
+        <p class="section-pad" style="text-align:left;">Hardware was not innocent either. Loose power connections meant that the car sometimes stopped or refused to start at all, simply because the wiring between the battery pack / power bank and the Raspberry Pi or motor driver was unstable. We developed the habit of checking and securing all power cables before each test. At the same time, the ultrasonic sensors occasionally returned None, making the baby duck's distance judgment unreliable, so we increased the delay between reading the left and right sensors to get more stable measurements.</p>
+        <p class="section-pad" style="text-align:left;">Despite all the drama, most system functions eventually worked as intended. The baby normally follows the mom but can accidentally get lost; if it stares at a wall for more than 5 seconds, it sends a LOST signal to the mother. Initially, the baby was also spamming motor data for display on the PiTFT, which delayed LOST detection, but after removing those prints, the mom could recognize the LOST signal within about 1 second on average.</p>
+        <p class="section-pad" style="text-align:left;">When everything works, the mother calls the baby to dance, the baby receives the command and joins in, and the grown-up baby follows more smoothly while the once-careless mom turns more carefully. The duck family finally passes the test bench and survives another day in this “happy” human-built pond!</p>
+
+        <hr id="result">
+
+        <h2 class="section-title">Result</h2>
+        <p class="section-pad" style="text-align:left;">evaluate your outcomes, did your project perform as intended? did you meet your original goals and specifications?</p>
+        <p class="section-pad" style="text-align:left;">In terms of communication, the duck family actually behaves better than most group chats. The bidirectional WiFi link between the leader and follower runs smoothly, with commands and LOST signals exchanged without any noticeable delay. From a system perspective, the network layer is stable and responsive enough that the “conversation” between mother and baby is not the main bottleneck of their behavior.</p>
+        <p class="section-pad" style="text-align:left;">On the motion and perception side, things are a bit more... bird-brained. The mother's color recognition works reliably, and she can plan a path toward the red-covered baby, but motor inconsistencies and the lack of an object-avoidance system mean her wandering is still clumsy and easily disrupted. The baby moves and measures distance correctly, with ultrasonic sensing behaving as expected, yet its following logic is underpowered: it tends to lose sight of the target and reacts too slowly when turning. In short, the ducks can see and talk just fine, which is a good start. They just haven't fully learned how to walk elegantly together.</p>
+
+        <hr id="conclusions">
+
+        <h2 class="section-title">Conclusions</h2>
+        <p class="section-pad" style="text-align:left;">key takeaways, what worked well, what did not work as expected</p>
+        <p class="section-pad" style="text-align:left;">Communication: Bidirectional WiFi communication between the leader and follower robot work nicely without noticeable delay.</p>
+        <p class="section-pad" style="text-align:left;">Leader Robot: Color recognition works well, and it can plan a path to reach the red covered baby. However, due to motor inconsistencies and a lack of object avoidance system, it still struggles to wander around properly.</p>
+        <p class="section-pad" style="text-align:left;">Follower Robot: Movement works normally, and ultrasonic distance sensing is accurate, but the following behavior is weak as it often loses the target and turns too slowly.</p>
+
+        <hr id="future">
+
+        <h2 class="section-title">Future Work</h2>
+        <div style="font-size:18px">
+          <ul style="padding-left:52px;">
+            <li>Auto align/calibrate upon reunited so they can resume the following sequence</li>
+            <li>Object avoidance on the leader robot</li>
+            <li>More types of commands for the leader robot to send to the follower robot</li>
+            <li>Voice commands instead of physical buttons for the leader robot</li>
+            <li>Add additional sensors for better following and seeking performances</li>
           </ul>
-          <h3>Total: $62</h3>
-      </div>
-      <hr>
-      <div style="font-size:18px">
-          <h2>References</h2>
+        </div>
+
+        <hr>
+
+        <h2 class="section-title">Work Distribution</h2>
+        <div style="text-align:center;">
+          <img class="img-rounded" src="pics/group.jpg" alt="Generic placeholder image" style="width:80%;">
+          <h4>Project group picture</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-6" style="font-size:16px;text-align:center;">
+            <img class="img-rounded" src="pics/a.png" alt="Generic placeholder image" width="240" height="240">
+            <h3>Rick</h3>
+            <p class="lead">netid@cornell.edu</p>
+            <p>Designed the overall software architecture (Just being himself).</p>
+          </div>
+          <div class="col-md-6" style="font-size:16px;text-align:center;">
+            <img class="img-rounded" src="pics/b.png" alt="Generic placeholder image" width="240" height="240">
+            <h3>Morty</h3>
+            <p class="lead">netid@cornell.edu</p>
+            <p>Tested the overall system.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <h2 class="section-title">Parts List</h2>
+        <div style="font-size:18px">
+          <ul style="padding-left:52px;">
+            <li>Standard Class Kit: Raspberry Pi 4, PiTFT, Expansion Cable, Robot Kit, Pi Case, 2 SD Cards, Pi Charger, Cables, Breadboard</li>
+            <li>Raspberry Pi Zero 2W ($10)</li>
+            <li>Raspberry Pi Zero 2W Case ($3, didn't use?)</li>
+            <li>Raspberry Pi Camera Module 2 ($15)</li>
+            <li>Raspberry Pi Camera Cable ($1)</li>
+            <li>Raspberry Pi Camera Case ($1)</li>
+            <li>IMU Sensor ($2, didn't use?)</li>
+            <li>2 * Ultrasonic Sensors ($2 each)</li>
+            <li>2 * Buzzers ($0.5 each, only used one?)</li>
+            <li>USB Microphone ($2, didn't use?)</li>
+            <li>2 * Robot Kit ($6 each)</li>
+            <li>Motor Driver ($7)</li>
+            <li>Small Breadboard ($4)</li>
+            <li>LEDs, Resistors, Wires, Foam Boards, Power Cables, AA Battery Holders, Batteries, MicroHDMI Adapter - Provided in lab</li>
+          </ul>
+          <h3 class="section-pad" style="text-align:left;font-weight:800;">Total: $62</h3>
+        </div>
+
+        <hr>
+
+        <h2 class="section-title">References</h2>
+        <div class="section-pad" style="font-size:18px">
           <a href="https://wiki.python.org/moin/UdpCommunication">UDP WiFi Communication Document</a><br>
-      </div>
+        </div>
 
-    <hr>
+        <hr>
 
-      <div class="row">
-              <h2>Code Appendix</h2>
-              <!-- <pre><code>
-// Hello World.c
-int main(){
-  printf("Hello World.\n");
-}
-              </code></pre> -->
-        <h3>Leader Robot Code</h3>
-        <script src="https://gist.github.com/neverlandiz/517b0841485424960c65d1ff2d5ed6dd.js"></script>
-        <h3>Follower Robot Code</h3>
-        <script src="https://gist.github.com/neverlandiz/39707d44ae3a297198fe2fcc2ce03a62.js"></script>
+        <h2 class="section-title">Code Appendix</h2>
+        <details class="code-fold">
+          <summary>Click to expand / collapse</summary>
+          <div class="code-fold-body">
+            <h3 style="text-align:left;font-weight:800;margin:10px 0 8px;">Leader Robot Code</h3>
+            <script src="https://gist.github.com/neverlandiz/517b0841485424960c65d1ff2d5ed6dd.js"></script>
+            <h3 style="text-align:left;font-weight:800;margin:14px 0 8px;">Follower Robot Code</h3>
+            <script src="https://gist.github.com/neverlandiz/39707d44ae3a297198fe2fcc2ce03a62.js"></script>
+          </div>
+        </details>
+
       </div>
-      
-    </div><!-- /.container -->
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
   </body>
 </html>
