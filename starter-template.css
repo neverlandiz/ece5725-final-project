@@ -11,8 +11,6 @@ body {
   color: #111;
 }
 
-.navbar-brand { font-size: 20px; }
-.navbar-nav > li > a { font-size: 12px; }
 
 body:before {
   content: "";
@@ -72,3 +70,6 @@ hr {
   margin-right: auto;  
   margin-left: auto;  
 }
+
+.navbar .navbar-brand { font-size: 16px; }
+.navbar .navbar-nav > li > a { font-size: 12px; }
