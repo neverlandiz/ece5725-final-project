@@ -52,8 +52,15 @@ body:before {
   -webkit-backdrop-filter: blur(6px);
 }
 
-.img-single-wrap { text-align: center; }
-.img-single { width: 62%; max-width: 640px; height: auto; }
+.img-single-wrap .img-two-wire{
+  width:62% !important;
+  max-width:640px !important;
+  height:auto !important;
+  display:block !important;
+  margin:0 auto !important;
+}
+
+
 
 .starter-template{
   text-align: center;
@@ -65,4 +72,5 @@ body:before {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 

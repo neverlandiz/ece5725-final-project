@@ -94,6 +94,12 @@
           <h3>Placeholder Video</h3>
           <iframe width="640" height="360" src="https://www.youtube.com/embed/et91Gea6CPk" frameborder="0" allowfullscreen></iframe>
         </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4" style="text-align:center;">
+            <img class="img-rounded" src="pics/Design.png" alt="feature image" width="240" height="240">
+          </div>
+        </div>
+        <div class="clearfix"></div>
 
         <hr id="design">
 
@@ -125,12 +131,10 @@
 
         <div class="img-pair">
           <div class="img-col">
-            <div class="section-subtitle">Leader Robot Wiring</div>
-            <img class="img-rounded" src="img/leader_robot.png" alt="Leader Robot Wiring Image">
+            <img class="img-rounded" src="pics/testing1.jpg" alt="Leader Robot Wiring Image">
           </div>
           <div class="img-col">
-            <div class="section-subtitle">Follower Robot Wiring</div>
-            <img class="img-rounded" src="img/follower_robot_wires.jpeg" alt="Follower Robot Wiring Image">
+            <img class="img-rounded" src="pics/testing2.png" alt="Follower Robot Wiring Image">
           </div>
         </div>
 
@@ -138,8 +142,9 @@
 
         <div class="img-single-wrap">
           <div class="section-subtitle">Two Robots Wiring</div>
-          <img class="img-rounded img-single" src="img/two_robots_with_wires.png" alt="Two Robots Wiring Image">
+          <img class="img-rounded img-single img-two-wire" src="img/two_robots_with_wires.png" alt="Two Robots Wiring Image">
         </div>
+
 
         <p class="section-pad" style="text-align:left;">write some descriptions for the images? maybe more drawings? or circuit diagrams?</p>
 
@@ -147,10 +152,20 @@
 
         <h2 class="section-title">Testing</h2>
         <p class="section-pad" style="text-align:left;">challenges encountered and how you resolved them? testing procedures and results verifying functionality</p>
-        <p class="section-pad" style="text-align:left;">Humans life sucks, so does the duck.</p>
+        <p class="section-pad" style="text-align:left;">Humans life sucks, so does the duck...</p>
         <p class="section-pad" style="text-align:left;">Since ducks need big ponds instead of cages, our robot ducks also demanded space, so we ran most experiments in the corridor outside the lab. In this “indoor wetland,” we discovered that other objects often had colors similar to the baby robot, which sometimes confused the mother's color-recognition camera and made her chase the wrong “duck.”</p>
         <p class="section-pad" style="text-align:left;">On the software side, the follower Pi Zero behaved like a stubborn duck that refused to wake up. When we used crontab for auto-start, the robot often stayed frozen after reboot, even though the same program worked perfectly when launched manually with a monitor attached. After switching to the second auto-start method from Lab 3 (using .bashrc), startup became much more reliable, and the baby robot finally began to follow its mom automatically after power-on.</p>
         <p class="section-pad" style="text-align:left;">Networking added another layer of chaos. The IP addresses of both the mother and baby kept changing. It looked like they were migrating to a new lake every time we rebooted. We had to constantly look up the current IPs and update the program configuration before the two ducks could talk again.</p>
+        <div class="img-pair">
+          <div class="img-col">
+            <div class="section-subtitle">Leader Robot Logic</div>
+            <img class="img-rounded" src="img/leader_logic.png" alt="Leader Robot Logic Image">
+          </div>
+          <div class="img-col">
+            <div class="section-subtitle">Follower Robot Logic</div>
+            <img class="img-rounded" src="img/follower_logic.png" alt="Follower Robot Logic Image">
+          </div>
+        </div>
         <p class="section-pad" style="text-align:left;">Hardware was not innocent either. Loose power connections meant that the car sometimes stopped or refused to start at all, simply because the wiring between the battery pack / power bank and the Raspberry Pi or motor driver was unstable. We developed the habit of checking and securing all power cables before each test. At the same time, the ultrasonic sensors occasionally returned None, making the baby duck's distance judgment unreliable, so we increased the delay between reading the left and right sensors to get more stable measurements.</p>
         <p class="section-pad" style="text-align:left;">Despite all the drama, most system functions eventually worked as intended. The baby normally follows the mom but can accidentally get lost; if it stares at a wall for more than 5 seconds, it sends a LOST signal to the mother. Initially, the baby was also spamming motor data for display on the PiTFT, which delayed LOST detection, but after removing those prints, the mom could recognize the LOST signal within about 1 second on average.</p>
         <p class="section-pad" style="text-align:left;">When everything works, the mother calls the baby to dance, the baby receives the command and joins in, and the grown-up baby follows more smoothly while the once-careless mom turns more carefully. The duck family finally passes the test bench and survives another day in this “happy” human-built pond!</p>
