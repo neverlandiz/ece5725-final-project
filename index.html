@@ -92,7 +92,7 @@
           <p style="text-align: left;padding: 0px 30px;">
             Our project features two robots, a leader and a follower, acting as a robotic mother duck🦆 and baby duck🐤. While the mother was moving, the baby carefully followed the mom but sometimes got “lost” and cried dramatically. The mother would then try to find the baby by color recognition with an equipped camera, like a tiny rescue mission. After the reunion, they ended up spinning and dancing happily together.
 
-            Provide a concise summary (3–4 sentences) of your project’s Summarize what you accomplished
+            Provide a concise summary (3-4 sentences) of your project's Summarize what you accomplished
             at a high level.</p>
           </div>
       </div>
@@ -152,6 +152,13 @@
       <div style="text-align:center;">
               <h2>Testing</h2>
               <p style="text-align: left;padding: 0px 30px;">challenges encountered and how you resolved them? testing procedures and results verifying functionality</p>
+              <p style="text-align: left;padding: 0px 30px;">Humans life sucks, so does the duck.</p>
+              <p style="text-align: left;padding: 0px 30px;">Since ducks need big ponds instead of cages, our robot ducks also demanded space, so we ran most experiments in the corridor outside the lab. In this “indoor wetland,” we discovered that other objects often had colors similar to the baby robot, which sometimes confused the mother's color-recognition camera and made her chase the wrong “duck.”</p>
+              <p style="text-align: left;padding: 0px 30px;">On the software side, the follower Pi Zero behaved like a stubborn duck that refused to wake up. When we used crontab for auto-start, the robot often stayed frozen after reboot, even though the same program worked perfectly when launched manually with a monitor attached. After switching to the second auto-start method from Lab 3 (using .bashrc), startup became much more reliable, and the baby robot finally began to follow its mom automatically after power-on.</p>
+              <p style="text-align: left;padding: 0px 30px;">Networking added another layer of chaos. The IP addresses of both the mother and baby kept changing. It looked like they were migrating to a new lake every time we rebooted. We had to constantly look up the current IPs and update the program configuration before the two ducks could talk again. </p>
+              <p style="text-align: left;padding: 0px 30px;">Hardware was not innocent either. Loose power connections meant that the car sometimes stopped or refused to start at all, simply because the wiring between the battery pack / power bank and the Raspberry Pi or motor driver was unstable. We developed the habit of checking and securing all power cables before each test. At the same time, the ultrasonic sensors occasionally returned None, making the baby duck's distance judgment unreliable, so we increased the delay between reading the left and right sensors to get more stable measurements.</p>
+              <p style="text-align: left;padding: 0px 30px;">Despite all the drama, most system functions eventually worked as intended. The baby normally follows the mom but can accidentally get lost; if it stares at a wall for more than 5 seconds, it sends a LOST signal to the mother. Initially, the baby was also spamming motor data for display on the PiTFT, which delayed LOST detection, but after removing those prints, the mom could recognize the LOST signal within about 1 second on average.</p>
+              <p style="text-align: left;padding: 0px 30px;">When everything works, the mother calls the baby to dance, the baby receives the command and joins in, and the grown-up baby follows more smoothly while the once-careless mom turns more carefully. The duck family finally passes the test bench and survives another day in this “happy” human-built pond!</p>
       </div>
 
     <hr id='result'>
@@ -159,6 +166,8 @@
       <div style="text-align:center;">
               <h2>Result</h2>
               <p style="text-align: left;padding: 0px 30px;">evaluate your outcomes, did your project perform as intended? did you meet your original goals and specifications?</p>
+              <p style="text-align: left;padding: 0px 30px;">In terms of communication, the duck family actually behaves better than most group chats. The bidirectional WiFi link between the leader and follower runs smoothly, with commands and LOST signals exchanged without any noticeable delay. From a system perspective, the network layer is stable and responsive enough that the “conversation” between mother and baby is not the main bottleneck of their behavior.</p>
+              <p style="text-align: left;padding: 0px 30px;">On the motion and perception side, things are a bit more... bird-brained. The mother's color recognition works reliably, and she can plan a path toward the red-covered baby, but motor inconsistencies and the lack of an object-avoidance system mean her wandering is still clumsy and easily disrupted. The baby moves and measures distance correctly, with ultrasonic sensing behaving as expected, yet its following logic is underpowered: it tends to lose sight of the target and reacts too slowly when turning. In short, the ducks can see and talk just fine, which is a good start. They just haven't fully learned how to walk elegantly together.</p>
       </div>
     
     <hr id='conclusions'>
