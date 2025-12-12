@@ -72,11 +72,10 @@
             <img class="img-rounded" src="pics/obj.jpg" alt="Generic placeholder image" width="240" height="240">
           </div>
           <div class="col-md-8" style="font-size:18px;">
-            <h2 class="section-title" style="margin-left:0;margin-right:0;">Project Objective:</h2>
-            <p style="text-align:left;padding:0 30px 0 0;">
+            <h2 class="section-title" style="margin:0 0 12px;text-align:left !important;">Project Objective</h2>
+            <p style="text-align:left;">
               Our project features two robots, a leader and a follower, acting as a robotic mother duck🦆 and baby duck🐤. While the mother was moving, the baby carefully followed the mom but sometimes got “lost” and cried dramatically. The mother would then try to find the baby by color recognition with an equipped camera, like a tiny rescue mission. After the reunion, they ended up spinning and dancing happily together.
-              Provide a concise summary (3-4 sentences) of your project's Summarize what you accomplished
-              at a high level.
+              Provide a concise summary (3-4 sentences) of your project's Summarize what you accomplished at a high level.
             </p>
           </div>
         </div>
@@ -108,6 +107,7 @@
         <h2 class="section-title">Drawings</h2>
         <p class="section-pad" style="text-align:left;">The flow chart shows what the ducks are thinking in their tiny minds. For the mother robot, there are four buttons: start moving, temporary stop, emergency stop, and seek. She begins in an idle state. Once the user presses move, she starts zigzagging in a fixed loop and waits for the baby to catch up. If the baby gets lost, she switches into seek mode; once the baby is found, they celebrate by dancing together. Temporary stop is often used to return to idle, while seek is mainly handy for testing the seeking function without waiting for chaos to happen naturally.</p>
         <p class="section-pad" style="text-align:left;">The baby robot starts by moving or turning based on the measured distance. When the difference between its two eyes (ultrasonic sensors) becomes large, it turns toward the side that is farther away to re-center on the target. If it gets too far behind or stares at a wall for too long, the baby gets scared and triggers a cry on the buzzer.</p>
+
         <div class="img-pair">
           <div class="img-col">
             <div class="section-subtitle">Leader Robot Logic</div>
@@ -120,9 +120,9 @@
         </div>
 
         <div style="height:18px;"></div>
-        
+
         <p class="section-pad" style="text-align:left;">Wiring for the car peripherals is almost the same for both ducks. Two motors connect to the motor driver’s A and B outputs, and both PWM pins connect to the microcontroller. For the mother duck, a camera plugs into the Pi to find the baby. For the baby duck, two ultrasonic sensors connect to GPIO pins (trig/echo) for distance measurement, plus a buzzer for crying.</p>
-        <div class="img-pair">
+
         <div class="img-pair">
           <div class="img-col">
             <div class="section-subtitle">Leader Robot Wiring</div>
@@ -190,18 +190,19 @@
           <img class="img-rounded" src="pics/group_official.jpg" alt="Generic placeholder image" style="width:80%;">
           <h4>Project group picture</h4>
         </div>
+
         <div class="row">
           <div class="col-md-6" style="font-size:16px;text-align:center;">
             <img class="img-rounded" src="pics/a.png" alt="Generic placeholder image" width="240" height="240">
             <h3>Katherine Hsu</h3>
             <p class="lead">kh854@cornell.edu</p>
-            <p> Mother Duck Wrangler🦆. (designed and implemented the leader robot)</p>
+            <p>Mother Duck Wrangler🦆. (designed and implemented the leader robot)</p>
           </div>
           <div class="col-md-6" style="font-size:16px;text-align:center;">
             <img class="img-rounded" src="pics/b.png" alt="Generic placeholder image" width="240" height="240">
             <h3>Bole Ding</h3>
             <p class="lead">bd467@cornell.edu</p>
-            <p> The one who incubated the egg🥚. (designed and implemented the follower robot)</p>
+            <p>The one who incubated the egg🥚. (designed and implemented the follower robot)</p>
           </div>
         </div>
 
