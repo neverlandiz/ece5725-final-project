@@ -69,7 +69,7 @@
 
         <div class="row">
           <div class="col-md-4" style="text-align:center;">
-            <img class="img-rounded" src="pics/1.jpg" alt="Generic placeholder image" width="240" height="240">
+            <img class="img-rounded" src="pics/obj.jpg" alt="Generic placeholder image" width="240" height="240">
           </div>
           <div class="col-md-8" style="font-size:18px;">
             <h2 class="section-title" style="margin-left:0;margin-right:0;">Project Objective:</h2>
@@ -106,7 +106,8 @@
         <hr id="drawings">
 
         <h2 class="section-title">Drawings</h2>
-
+        <p class="section-pad" style="text-align:left;">The flow chart shows what the ducks are thinking in their tiny minds. For the mother robot, there are four buttons: start moving, temporary stop, emergency stop, and seek. She begins in an idle state. Once the user presses move, she starts zigzagging in a fixed loop and waits for the baby to catch up. If the baby gets lost, she switches into seek mode; once the baby is found, they celebrate by dancing together. Temporary stop is often used to return to idle, while seek is mainly handy for testing the seeking function without waiting for chaos to happen naturally.</p>
+        <p class="section-pad" style="text-align:left;">The baby robot starts by moving or turning based on the measured distance. When the difference between its two eyes (ultrasonic sensors) becomes large, it turns toward the side that is farther away to re-center on the target. If it gets too far behind or stares at a wall for too long, the baby gets scared and triggers a cry on the buzzer.</p>
         <div class="img-pair">
           <div class="img-col">
             <div class="section-subtitle">Leader Robot Logic</div>
@@ -119,7 +120,9 @@
         </div>
 
         <div style="height:18px;"></div>
-
+        
+        <p class="section-pad" style="text-align:left;">Wiring for the car peripherals is almost the same for both ducks. Two motors connect to the motor driver’s A and B outputs, and both PWM pins connect to the microcontroller. For the mother duck, a camera plugs into the Pi to find the baby. For the baby duck, two ultrasonic sensors connect to GPIO pins (trig/echo) for distance measurement, plus a buzzer for crying.</p>
+        <div class="img-pair">
         <div class="img-pair">
           <div class="img-col">
             <div class="section-subtitle">Leader Robot Wiring</div>
@@ -184,21 +187,21 @@
 
         <h2 class="section-title">Work Distribution</h2>
         <div style="text-align:center;">
-          <img class="img-rounded" src="pics/group.jpg" alt="Generic placeholder image" style="width:80%;">
+          <img class="img-rounded" src="pics/group_official.jpg" alt="Generic placeholder image" style="width:80%;">
           <h4>Project group picture</h4>
         </div>
         <div class="row">
           <div class="col-md-6" style="font-size:16px;text-align:center;">
             <img class="img-rounded" src="pics/a.png" alt="Generic placeholder image" width="240" height="240">
-            <h3>Rick</h3>
-            <p class="lead">netid@cornell.edu</p>
-            <p>Designed the overall software architecture (Just being himself).</p>
+            <h3>Katherine Hsu</h3>
+            <p class="lead">kh854@cornell.edu</p>
+            <p> Mother Duck Wrangler🦆. (designed and implemented the leader robot)</p>
           </div>
           <div class="col-md-6" style="font-size:16px;text-align:center;">
             <img class="img-rounded" src="pics/b.png" alt="Generic placeholder image" width="240" height="240">
-            <h3>Morty</h3>
-            <p class="lead">netid@cornell.edu</p>
-            <p>Tested the overall system.</p>
+            <h3>Bole Ding</h3>
+            <p class="lead">bd467@cornell.edu</p>
+            <p> The one who incubated the egg🥚. (designed and implemented the follower robot)</p>
           </div>
         </div>
 
