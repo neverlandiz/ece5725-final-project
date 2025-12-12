@@ -32,14 +32,11 @@ body:before {
   padding-bottom: 0;
 }
 
-.content-glass {
-  margin-top: 18px;
-  padding: 28px 24px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.40);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+.content-glass{
+  background: rgba(255,255,255,0.40);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
 }
 
 .navbar .navbar-brand { font-size: 16px; }
@@ -57,3 +54,15 @@ body:before {
 
 .img-single-wrap { text-align: center; }
 .img-single { width: 62%; max-width: 640px; height: auto; }
+
+.starter-template{
+  text-align: center;
+}
+
+.starter-template h1{
+  font-size: 64px;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
