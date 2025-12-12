@@ -73,13 +73,12 @@
 
         <div class="row">
           <div class="col-md-4" style="text-align:center;">
-            <img class="img-rounded" src="pics/obj.jpg" alt="Generic placeholder image" width="240" height="240">
+            <img class="img-rounded" src="img/obj.jpg" alt="Generic placeholder image" width="240" height="240">
           </div>
           <div class="col-md-8" style="font-size:18px;">
             <h2 class="section-title" style="margin:0 0 12px;text-align:left !important;">Project Objective</h2>
             <p style="text-align:left;">
-              Our project features two robots, a leader and a follower, acting as a robotic mother duck🦆 and baby duck🐤. While the mother was moving, the baby carefully followed the mom but sometimes got “lost” and cried dramatically. The mother would then try to find the baby by color recognition with an equipped camera, like a tiny rescue mission. After the reunion, they ended up spinning and dancing happily together.
-              Provide a concise summary (3-4 sentences) of your project's Summarize what you accomplished at a high level.
+              Our project features two robots, a leader and a follower, acting as a robotic mother duck 🦆 and baby duck 🐤. While the mother was moving, the baby carefully followed the mom but sometimes got “lost” and cried dramatically. The mother would then try to find the baby by color recognition with an equipped camera, like a tiny rescue mission. After the reunion, they ended up spinning and dancing happily together.
             </p>
           </div>
         </div>
@@ -87,15 +86,8 @@
         <hr id="video">
 
         <h2 class="section-title">Video</h2>
-        <p class="section-pad" style="text-align:left;">Include the following placeholder video link on your website:
-          https://www.youtube.com/watch?v=et91Gea6CPk
-          Create a ~2-minute video demonstrating your project and upload it to the Cornell Box folder
-          (https://cornell.box.com/s/0v0wdiky2z7gvs7un9reylqd05eb8mu3). The instructional team will
-          then upload your video to the class YouTube channel and update your website to embed the final
-          version.
-        </p>
         <div style="text-align:center;">
-          <h3>Placeholder Video</h3>
+          <!-- <h3>Placeholder Video</h3> -->
           <iframe width="640" height="360" src="https://www.youtube.com/embed/et91Gea6CPk" frameborder="0" allowfullscreen></iframe>
         </div>
 
@@ -103,11 +95,10 @@
 
         <h2 class="section-title">Design</h2>
         <div style="float:right;text-align:center;margin:6px 30px 10px 18px;">
-          <img class="img-rounded" src="pics/Design.png" alt="feature image" width="240" height="240">
+          <img class="img-rounded" src="img/Design.png" alt="feature image" width="240" height="240">
         </div>
         <p class="section-pad" style="text-align:left;">The follower robot would follow the leader robot around and signal the leader via WiFi if it’s lost. The robot is considered lost if the distance measured is too large or if it’s been staring at a wall for 5 seconds. Once the leader robot receives the LOST signal, it would start seeking for the follower robot and send a FOUND signal upon discovery. Once the two robots are reunited, they would dance.</p>
         <p class="section-pad" style="text-align:left;">The leader robot is equipped with a camera and uses the OpenCV library for color detection to seek for the follower robot. For debugging purposes, it also uses the PiTFT screen to display data and four buttons to perform different actions (seek, move, temp quit, full quit). The follower robot is equipped with 2 ultrasonic sensors to measure its distance from the leader robot and follow it around and 1 buzzer for audio cue.</p>
-        <p class="section-pad" style="text-align:left;">key design iterations and major milestones</p>
         <div style="clear:both;"></div>
 
         <hr id="drawings">
@@ -146,23 +137,18 @@
           </div>
         </div>
 
-        <p class="section-pad" style="text-align:left;">write some descriptions for the images? maybe more drawings? or circuit diagrams?</p>
-
         <hr id="testing">
 
         <h2 class="section-title">Testing</h2>
-        <p class="section-pad" style="text-align:left;">challenges encountered and how you resolved them? testing procedures and results verifying functionality</p>
-        <p class="section-pad" style="text-align:left;">Humans life sucks, so does the duck...</p>
-
         <p class="section-pad" style="text-align:left;">Since ducks need big ponds instead of cages, our robot ducks also demanded space, so we ran most experiments in the corridor outside the lab. In this “indoor wetland,” we discovered that other objects often had colors similar to the baby robot, which sometimes confused the mother's color-recognition camera and made her chase the wrong “duck.”</p>
         <p class="section-pad" style="text-align:left;">On the software side, the follower Pi Zero behaved like a stubborn duck that refused to wake up. When we used crontab for auto-start, the robot often stayed frozen after reboot, even though the same program worked perfectly when launched manually with a monitor attached. After switching to the second auto-start method from Lab 3 (using .bashrc), startup became much more reliable, and the baby robot finally began to follow its mom automatically after power-on.</p>
 
         <div class="img-pair">
           <div class="img-col">
-            <img class="img-rounded" src="pics/testing1.jpg" alt="Testing Image 1">
+            <img class="img-rounded" src="img/testing1.jpg" alt="Testing Image 1">
           </div>
           <div class="img-col">
-            <img class="img-rounded" src="pics/testing2.png" alt="Testing Image 2">
+            <img class="img-rounded" src="img/testing2.png" alt="Testing Image 2">
           </div>
         </div>
 
@@ -172,14 +158,12 @@
         <hr id="result">
 
         <h2 class="section-title">Result</h2>
-        <p class="section-pad" style="text-align:left;">evaluate your outcomes, did your project perform as intended? did you meet your original goals and specifications?</p>
         <p class="section-pad" style="text-align:left;">Despite all the drama, most system functions eventually worked as intended. The baby normally follows the mom but can accidentally get lost; if it stares at a wall for more than 5 seconds, it sends a LOST signal to the mother. Initially, the baby was also spamming motor data for display on the PiTFT, which delayed LOST detection, but after removing those prints, the mom could recognize the LOST signal within about 1 second on average.</p>
         <p class="section-pad" style="text-align:left;">When everything works, the mother calls the baby to dance, the baby receives the command and joins in, and the grown-up baby follows more smoothly while the once-careless mom turns more carefully. The duck family finally passes the test bench and survives another day in this “happy” human-built pond!</p>
         
         <hr id="conclusions">
 
         <h2 class="section-title">Conclusions</h2>
-        <p class="section-pad" style="text-align:left;">key takeaways, what worked well, what did not work as expected</p>
         <p class="section-pad" style="text-align:left;">In terms of communication, the duck family actually behaves better than most group chats. The bidirectional WiFi link between the leader and follower runs smoothly, with commands and LOST signals exchanged without any noticeable delay. From a system perspective, the network layer is stable and responsive enough that the “conversation” between mother and baby is not the main bottleneck of their behavior.</p>
         <p class="section-pad" style="text-align:left;">On the motion and perception side, things are a bit more... bird-brained. The mother's color recognition works reliably, and she can plan a path toward the red-covered baby, but motor inconsistencies and the lack of an object-avoidance system mean her wandering is still clumsy and easily disrupted. The baby moves and measures distance correctly, with ultrasonic sensing behaving as expected, yet its following logic is underpowered: it tends to lose sight of the target and reacts too slowly when turning. In short, the ducks can see and talk just fine, which is a good start. They just haven't fully learned how to walk elegantly together.</p>       
 
@@ -206,16 +190,16 @@
 
         <div class="row">
           <div class="col-md-6" style="font-size:16px;text-align:center;">
-            <img class="img-rounded" src="pics/a.png" alt="Generic placeholder image" width="240" height="240">
+            <img class="img-rounded" src="img/quagsire.jpg" alt="Generic placeholder image" width="240" height="240">
             <h3>Katherine Hsu</h3>
             <p class="lead">kh854@cornell.edu</p>
-            <p>Mother Duck Wrangler 🦆 (designed and implemented the leader robot).</p>
+            <p>Mother Duck Wrangler 🦆 <br> (designed and implemented the leader robot)</p>
           </div>
           <div class="col-md-6" style="font-size:16px;text-align:center;">
-            <img class="img-rounded" src="pics/b.png" alt="Generic placeholder image" width="240" height="240">
+            <img class="img-rounded" src="img/wooper.jpg" alt="Generic placeholder image" width="240" height="240">
             <h3>Bole Ding</h3>
             <p class="lead">bd467@cornell.edu</p>
-            <p>The one who incubated the egg 🥚 (designed and implemented the follower robot).</p>
+            <p>The one who incubated the egg 🥚 <br> (designed and implemented the follower robot)</p>
           </div>
         </div>
 
@@ -231,7 +215,7 @@
             <li>Raspberry Pi Camera Cable ($1)</li>
             <li>Raspberry Pi Camera Case ($1)</li>
             <li>IMU Sensor ($2)</li>
-            <li>2 * Ultrasonic Sensors ($2)</li>
+            <li>2 * Ultrasonic Sensors ($2 each)</li>
             <li>2 * Buzzers ($0.5 each)</li>
             <li>USB Microphone ($2)</li>
             <li>2 * Robot Kit ($6)</li>
@@ -250,7 +234,7 @@
           <a href="https://github.com/raspberrypi/picamera2">Picamera2 Documentation</a><br>
 
           <br>
-          <p>Amazing background image drawn by tofublock</p>
+          <p>Amazing website background image drawn by tofublock</p>
         </div>
 
         <hr>
