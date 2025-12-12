@@ -27,6 +27,10 @@ body:before {
 .container {
   position: relative;
   z-index: 1;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .content-glass {
@@ -71,5 +75,19 @@ hr {
   margin-left: auto;  
 }
 
-.navbar .navbar-brand { font-size: 16px; }
-.navbar .navbar-nav > li > a { font-size: 12px; }
+.navbar.navbar-brand { font-size: 16px; }
+.navbar.navbar-nav > li > a { font-size: 14px; }
+.navbar.navbar-default {
+  background-color: rgba(248, 248, 248, 0.75) !important; 
+  border-color: rgba(231, 231, 231, 0.35) !important;
+}
+
+.navbar.navbar-inverse {
+  background-color: rgba(34, 34, 34, 0.75) !important;
+  border-color: rgba(8, 8, 8, 0.35) !important;
+}
+
+.navbar {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
